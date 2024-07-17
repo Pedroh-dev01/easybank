@@ -1,78 +1,74 @@
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-style: none;
-    text-decoration: none;
-    border: none;
-    list-style: none;
     font-family: "Public Sans", sans-serif;
+    text-decoration: none;
+    list-style: none;
+    font-style: none;
     transition: .2s linear;
 }
 
 body{
-    
+    background-color: #000;
 }
 
-header{
+header {
     background-color: #ffffff;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
+    padding: 1rem;
 
-    .header__container{
-        padding: 1rem 13rem;
+    .header__container {
         display: flex;
-        align-items: center;
         justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
 
-        .icon__hamburger{
-            display: none;
-        }
+    .nav__container {
+        ul{
+            display: flex;
+            gap: 1rem;
+            
+            li{
+                color: #6b6b6b;
+                font-weight: 600;
+                font-size: 18px;
 
-        .icon__close{
-            display: none;
-        }
-
-        .nav__container{
-            ul{
-                display: flex;
-                gap: 1rem;
-                
-                li{
-                    color: #6b6b6b;
-                    font-weight: 600;
-                    font-size: 18px;
-
-                    &:hover{
-                        font-size: 20px;
-                        text-decoration: underline;
-                        text-decoration-color: #31d35c; 
-                        text-underline-offset: .8rem;
-                        text-decoration-thickness: 2px
-                    }
+                &:hover{
+                    font-size: 20px;
+                    text-decoration: underline;
+                    text-decoration-color: #31d35c; 
+                    text-underline-offset: 1.2rem;
+                    text-decoration-thickness: 2px
                 }
             }
         }
+    }
 
+    .icon__hamburger,
+    .icon__close {
+        display: none;
+        cursor: pointer;
+        font-size: 24px;
+    }
 
+    .botao__header{
+        
     }
 }
 
 @media screen and (max-width: 980px) {
-    header{
+    header {
 
         .header__container{
-            padding: 1rem 2rem;
-            .icon__hamburger{
-                display:block;
-                cursor: pointer;
-            }
-
-            .nav__container{
+            .nav__container {
                 background-color: #ffffff;
                 position: fixed;
                 top: 5rem;
@@ -80,17 +76,32 @@ header{
                 right: 6rem;
                 padding: 2rem 5rem;
                 border-radius: 10px;
-                ul{
+                display: block;
+    
+                &.active {
+                    display: none;
+                }
+    
+                ul {
                     display: flex;
                     align-items: center;
                     justify-content: center;
                     flex-direction: column;
                     gap: 2rem;
-
-                    li:hover{
-                        text-decoration: none;
-                        font-size: 18px;
-                    }
+                }
+            }
+    
+            .icon__hamburger {
+                display: block;
+            }
+    
+            &.menu-open {
+                .icon__hamburger {
+                    display: none;
+                }
+    
+                .icon__close {
+                    display: block;
                 }
             }
 
@@ -98,18 +109,7 @@ header{
                 display: none;
             }
 
-            .nav__container.active{
-                top: -100%;
-            }
-
-            .icon__close.active{
-                display: block;
-                cursor: pointer;
-            }
-
-            .icon__hamburger:not(.active){
-                display: none;
-            }
         }
+        
     }
 }

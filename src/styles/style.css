@@ -3,12 +3,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-style: none;
-  text-decoration: none;
-  border: none;
-  list-style: none;
   font-family: "Public Sans", sans-serif;
+  text-decoration: none;
+  list-style: none;
+  font-style: none;
   transition: 0.2s linear;
+}
+
+body {
+  background-color: #000;
 }
 
 header {
@@ -17,44 +20,38 @@ header {
   top: 0;
   left: 0;
   right: 0;
+  padding: 1rem;
 }
 header .header__container {
-  padding: 1rem 13rem;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
-header .header__container .icon__hamburger {
-  display: none;
-}
-header .header__container .icon__close {
-  display: none;
-}
-header .header__container .nav__container ul {
+header .nav__container ul {
   display: flex;
   gap: 1rem;
 }
-header .header__container .nav__container ul li {
+header .nav__container ul li {
   color: #6b6b6b;
   font-weight: 600;
   font-size: 18px;
 }
-header .header__container .nav__container ul li:hover {
+header .nav__container ul li:hover {
   font-size: 20px;
   text-decoration: underline;
   text-decoration-color: #31d35c;
-  text-underline-offset: 0.8rem;
+  text-underline-offset: 1.2rem;
   text-decoration-thickness: 2px;
 }
-
+header .icon__hamburger,
+header .icon__close {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+}
 @media screen and (max-width: 980px) {
-  header .header__container {
-    padding: 1rem 2rem;
-  }
-  header .header__container .icon__hamburger {
-    display: block;
-    cursor: pointer;
-  }
   header .header__container .nav__container {
     background-color: #ffffff;
     position: fixed;
@@ -63,6 +60,10 @@ header .header__container .nav__container ul li:hover {
     right: 6rem;
     padding: 2rem 5rem;
     border-radius: 10px;
+    display: block;
+  }
+  header .header__container .nav__container.active {
+    display: none;
   }
   header .header__container .nav__container ul {
     display: flex;
@@ -71,21 +72,16 @@ header .header__container .nav__container ul li:hover {
     flex-direction: column;
     gap: 2rem;
   }
-  header .header__container .nav__container ul li:hover {
-    text-decoration: none;
-    font-size: 18px;
+  header .header__container .icon__hamburger {
+    display: block;
   }
-  header .header__container .botao__header {
+  header .header__container.menu-open .icon__hamburger {
     display: none;
   }
-  header .header__container .nav__container.active {
-    top: -100%;
-  }
-  header .header__container .icon__close.active {
+  header .header__container.menu-open .icon__close {
     display: block;
-    cursor: pointer;
   }
-  header .header__container .icon__hamburger:not(.active) {
+  header .header__container .botao__header {
     display: none;
   }
 }/*# sourceMappingURL=style.css.map */
