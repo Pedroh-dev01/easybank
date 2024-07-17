@@ -8,6 +8,7 @@
   list-style: none;
   font-style: none;
   transition: 0.2s linear;
+  border: none;
 }
 
 body {
@@ -42,7 +43,7 @@ header .nav__container ul li:hover {
   font-size: 20px;
   text-decoration: underline;
   text-decoration-color: #31d35c;
-  text-underline-offset: 1.2rem;
+  text-underline-offset: 1.6rem;
   text-decoration-thickness: 2px;
 }
 header .icon__hamburger,
@@ -51,6 +52,18 @@ header .icon__close {
   cursor: pointer;
   font-size: 24px;
 }
+header .botao__header button {
+  padding: 0.7rem 2rem;
+  background: linear-gradient(to right, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
+  border-radius: 30px;
+  font-size: 15px;
+  color: #ffffff;
+  cursor: pointer;
+}
+header .botao__header button:hover {
+  background: linear-gradient(#85e59f, #81d4e9);
+}
+
 @media screen and (max-width: 980px) {
   header .header__container .nav__container {
     background-color: #ffffff;
@@ -71,6 +84,9 @@ header .icon__close {
     justify-content: center;
     flex-direction: column;
     gap: 2rem;
+  }
+  header .header__container .nav__container ul li {
+    text-decoration: none;
   }
   header .header__container .icon__hamburger {
     display: block;

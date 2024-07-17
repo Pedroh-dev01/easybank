@@ -9,6 +9,7 @@
     list-style: none;
     font-style: none;
     transition: .2s linear;
+    border: none;
 }
 
 body{
@@ -45,7 +46,7 @@ header {
                     font-size: 20px;
                     text-decoration: underline;
                     text-decoration-color: #31d35c; 
-                    text-underline-offset: 1.2rem;
+                    text-underline-offset: 1.6rem;
                     text-decoration-thickness: 2px
                 }
             }
@@ -60,13 +61,23 @@ header {
     }
 
     .botao__header{
-        
+        button{
+            padding: .7rem 2rem;
+            background: linear-gradient(to right, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
+            border-radius: 30px;
+            font-size: 15px;
+            color: #ffffff;
+            cursor: pointer;
+
+            &:hover{
+                background: linear-gradient(lighten(hsl(136, 65%, 51%), 20%), lighten(hsl(192, 70%, 51%), 20%));
+            }
+        }
     }
 }
 
 @media screen and (max-width: 980px) {
     header {
-
         .header__container{
             .nav__container {
                 background-color: #ffffff;
@@ -88,6 +99,10 @@ header {
                     justify-content: center;
                     flex-direction: column;
                     gap: 2rem;
+
+                    li{
+                        text-decoration: none;
+                    }
                 }
             }
     
