@@ -11,10 +11,6 @@
   transition: 0.2s linear;
 }
 
-body {
-  background-color: #000;
-}
-
 header {
   background-color: #ffffff;
   position: fixed;
