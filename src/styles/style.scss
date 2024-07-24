@@ -12,9 +12,19 @@
     border: none;
 }
 
-body{
-    background-color: #000;
-}
+.botao{
+    
+        padding: .7rem 2rem;
+        background: linear-gradient(to right, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
+        border-radius: 30px;
+        font-size: 15px;
+        color: #ffffff;
+        cursor: pointer;
+
+        &:hover{
+            background: linear-gradient(lighten(hsl(136, 65%, 51%), 20%), lighten(hsl(192, 70%, 51%), 20%));
+        }
+    }
 
 header {
     background-color: #ffffff;
@@ -23,6 +33,7 @@ header {
     left: 0;
     right: 0;
     padding: 1rem;
+    z-index: 100;
 
     .header__container {
         display: flex;
@@ -71,6 +82,106 @@ header {
 
             &:hover{
                 background: linear-gradient(lighten(hsl(136, 65%, 51%), 20%), lighten(hsl(192, 70%, 51%), 20%));
+            }
+        }
+    }
+}
+
+
+.container__home{
+    background: url(themes/images/bg-intro-desktop.svg);
+    background-position: 35rem -12rem;
+    height: 100vh;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+
+    .info__home{
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        gap: 2rem;
+        margin: 0 7rem;
+        width: 40%;
+        color: #afafaf;
+
+        h1{
+            font-size: 50px;
+        }
+
+        p{
+            font-size: 18px;
+            width: 90%;
+        }
+
+        .botao{
+            width: 40%;
+        }
+
+    }
+
+    .img__celular{
+        position: relative;
+        right: 0;
+        top: 2.8rem;
+        overflow: hidden;
+
+        img{
+            position: relative;
+            height: 980px;
+            right: -17%;
+            width: 100%;
+        }
+        
+    }
+}
+
+.container__about{
+    background-color: #fafafa;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 6rem;
+
+    .container__title{
+        width: 50%;
+        h2{
+            font-size: 35px;
+            color: #494949;
+            margin-bottom: 2rem;
+        }
+        p{
+            font-size: 18px;
+            color: #6b6b6b;
+        }
+    }
+
+    .container__conteudo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4rem;
+        
+        .card{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            gap: 1.8rem;
+            width: 80%;
+
+            .title{
+                h3{
+                    font-size: 22px;
+                    color: #494949;
+                }
+            }
+
+            .info{
+                p{
+                    font-size: 18px;
+                    color: #6b6b6b;
+                }
             }
         }
     }
