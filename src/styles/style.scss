@@ -231,7 +231,50 @@ article{
     }
 }
 
+footer{
+    background-color: #2d314d;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 6rem;
+
+    section{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 9rem;
+
+        .container__footer__01{
+            display: flex;
+            flex-direction: column;
+            gap: 4rem;
     
+            .social__icons{
+                display: flex;
+                gap: 1.2rem;
+            }
+        }
+    
+        .container__footer__02{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            gap: 2rem;
+            a{
+                color: #ffffff;
+                font-weight: 600;
+            }
+        }
+    }
+
+    .container__butao{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-end;
+        gap: 2rem;
+        color: #afafaf;
+    }
+}
 
 @media screen and (max-width: 980px) {
     header {

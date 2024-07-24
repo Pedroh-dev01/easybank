@@ -191,6 +191,46 @@ article .container__article .articles__container p {
   margin: auto 1rem;
 }
 
+footer {
+  background-color: #2d314d;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 6rem;
+}
+footer section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9rem;
+}
+footer section .container__footer__01 {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+footer section .container__footer__01 .social__icons {
+  display: flex;
+  gap: 1.2rem;
+}
+footer section .container__footer__02 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 2rem;
+}
+footer section .container__footer__02 a {
+  color: #ffffff;
+  font-weight: 600;
+}
+footer .container__butao {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  gap: 2rem;
+  color: #afafaf;
+}
+
 @media screen and (max-width: 980px) {
   header .header__container .nav__container {
     background-color: #ffffff;
