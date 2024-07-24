@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Public Sans", sans-serif;
+  font-weight: 500;
   text-decoration: none;
   list-style: none;
   font-style: none;
@@ -153,6 +154,41 @@ header .botao__header button:hover {
 .container__about .container__conteudo .card .info p {
   font-size: 18px;
   color: #6b6b6b;
+}
+
+article {
+  padding: 6rem;
+}
+article h2 {
+  font-size: 35px;
+  margin-bottom: 4rem;
+  color: #494949;
+}
+article .container__article {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 2rem;
+}
+article .container__article .articles__container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  border-radius: 15px;
+  color: #6b6b6b;
+}
+article .container__article .articles__container img {
+  height: 250px;
+  width: 250px;
+  border-radius: 15px;
+}
+article .container__article .articles__container span {
+  font-size: 15px;
+  margin: auto 1rem;
+}
+article .container__article .articles__container p {
+  font-size: 18px;
+  width: 80%;
+  margin: auto 1rem;
 }
 
 @media screen and (max-width: 980px) {
